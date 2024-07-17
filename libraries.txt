@@ -1,0 +1,94 @@
+// basic next setup
+
+npx create-next-app@latest
+/*
+√ What is your project named? ... .
+√ Would you like to use TypeScript? ... No / Yes
+√ Would you like to use ESLint? ... No / Yes
+√ Would you like to use Tailwind CSS? ... No / Yes
+√ Would you like to use `src/` directory? ... No / Yes
+√ Would you like to use App Router? (recommended) ... No / Yes
+√ Would you like to customize the default import alias (@/*)? ... No / Yes
+*/
+
+// run app
+npm run dev
+
+// ESLint standard configuration 
+
+npm install eslint-config-standard (update .eslintrc.json)
+npm install eslint-plugin-tailwindcss (organize classname logically to make code easier to read)
+npm install eslint-config-prettier (to avoid conflicts between prettier & eslint)
+npm install prettier (and update settings to integrate eslint & prettier with VS code: ctrl+shift+p => open settings json)
+npm run lint (to test eslint)
+
+// push code to github
+
+git init
+git add .
+git commit -m "added prettier and linting libraries"
+git branch -M main
+git remote add origin https://github.com/AbhaySingh5349/StackOverflow_Nextjs13.git
+git push -u origin main
+
+// add tailwind dependencies
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+npm install tailwindcss-animate
+npm install @tailwindcss/typography
+
+// clerk auth
+
+get API key and store in .env.logical
+npm install @clerk/nextjs
+add App Router and middleware code 
+
+// shadcn for theme switching, mobile nav bar, search inputs, render-tags, dropdowns, forms, stats tab , text-area for bio
+// skeleton (for loading), toasts
+
+npx shadcn-ui@latest init
+npx shadcn-ui@latest add button
+npx shadcn-ui@latest add menubar
+npx shadcn-ui@latest add sheet
+npx shadcn-ui@latest add input
+npx shadcn-ui@latest add badge
+npx shadcn-ui@latest add select
+npx shadcn-ui@latest add form
+npx shadcn-ui@latest add tabs
+npx shadcn-ui@latest add textarea
+npx shadcn-ui@latest add skeleton
+npx shadcn-ui@latest add toast
+
+// Tiny MCE editor for asking questions
+
+npm install --save @tinymce/tinymce-react
+
+// backend
+
+update next.config.js
+npm install mongoose mongodb
+
+// sync clerk data & user database using webhooks
+
+npm install svix
+
+// code parsing
+
+npm install html-react-parser (pasring HTML, can be used for markdown)
+npm install prismjs (for code content)
+
+// working with search queries
+
+npm install query-string
+
+// react icons (global-search loading)
+
+npm install @radix-ui/react-icons
+
+// check for package updates
+
+npm install -g npm-check-updates
+ncu (to show all updated packages)
+ncu -u (to update all packages)
+npm install (to install updated packages)
